@@ -1,0 +1,490 @@
+/* Set the height of the HTML element to 100% */
+html {
+  height: 100%;
+}
+#messages {
+  overflow: hidden;
+}
+
+.message {
+  float: right; /* Float the message to the left */
+  margin: 0; /* Remove default margin from h1 */
+  padding-right: 10px; /* Add spacing between .message and #score */
+  padding: 15px;
+}
+
+#score {
+  float: left; /* Float the score to the left */
+  padding: 15px;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  width: 410px;
+  margin-bottom: 3%;
+}
+
+.play-button button {
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 10px;
+  background-color: #000000fc;
+  color: #fffffffc;
+  padding: 13.5px 21px;
+  outline: none;
+  cursor: pointer;
+}
+
+/* Style the body element */
+body {
+  height: 100%;
+  background: rgb(131, 58, 180);
+  background: linear-gradient(
+    317deg,
+    rgba(131, 58, 180, 1) 0%,
+    rgba(253, 29, 29, 1) 25%,
+    rgba(252, 176, 69, 1) 100%
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Game Container */
+.game {
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  background-color: #ffffff;
+  border-radius: 5px;
+}
+
+/* Grid 1 Styles */
+#grid1 {
+  display: grid;
+}
+
+/* Button Styles within Grid 1 */
+#grid1 button {
+  background-color: #000000fc;
+  color: #ffffff;
+  font-weight: bold;
+  border: 15px solid #ffffff;
+  border-radius: 25px;
+  outline: none;
+  cursor: pointer;
+}
+/* Grid 2 Styles */
+#grid2 {
+  display: grid;
+}
+
+/* Button Styles within Grid 2 */
+#grid2 button {
+  background-color: #000000fc;
+  color: #ffffff;
+  font-weight: bold;
+  border: 10px solid #ffffff;
+  border-radius: 15px;
+  outline: none;
+  cursor: pointer;
+}
+/* Grid 3 Styles */
+#grid3 {
+  display: grid;
+}
+
+/* Button Styles within Grid 3 */
+#grid3 button {
+  background-color: #000000fc;
+  color: #ffffff;
+  font-weight: bold;
+  border: 10px solid #ffffff;
+  border-radius: 15px;
+  outline: none;
+  cursor: pointer;
+}
+
+/* Button Styles within Footer */
+.footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Span Styles within Footer */
+.footer span {
+  flex: 1;
+  text-align: left;
+  color: #000000;
+  font-weight: bold;
+  margin: auto 0;
+  padding-left: 15px;
+}
+
+/* Hiding certain elements with specific IDs */
+#grid1.hidden,
+#grid2.hidden,
+#grid3.hidden,
+#grid.hidden,
+#hideheader.hidden,
+#messages.hidden {
+  display: none;
+}
+
+/* Media Queries for responsiveness*/
+
+@media (max-width: 320px) {
+  /* Update styles for elements to fit small screens */
+
+  /* Style for the messages container */
+  #messages {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    background-color: #ffffff;
+    color: #000000fc;
+  }
+  .header {
+    width: 300px;
+  }
+  .play-button button {
+    font-size: 15px;
+    margin-right: 5px;
+    padding: 10px 20px;
+  }
+
+  /* Style for the message within the messages container */
+  .message {
+    font-size: 15px;
+    font-weight: bold;
+    padding: 10px;
+  }
+
+  /* Style for the score within the messages container */
+  #score {
+    font-size: 15px;
+    font-weight: bold;
+    padding: 10px;
+  }
+  #grid1 button {
+    border: 12px solid #ffffff;
+    border-radius: 25px;
+  }
+  #grid1 {
+    grid-template-columns: repeat(3, 90px);
+    grid-template-rows: repeat(3, 90px);
+  }
+
+  #grid1 button {
+    font-size: 28px;
+  }
+
+  #grid2 {
+    grid-template-columns: repeat(4, 70px);
+    grid-template-rows: repeat(4, 70px);
+  }
+
+  #grid2 button {
+    font-size: 20px;
+  }
+
+  #grid3 {
+    grid-template-columns: repeat(5, 58px);
+    grid-template-rows: repeat(5, 58px);
+  }
+
+  #grid3 button {
+    font-size: 18px;
+  }
+
+  .footer {
+    margin-top: 20px;
+  }
+
+  .footer span {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 321px) and (max-width: 480px) {
+  /* Style for the messages container */
+  #messages {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    background-color: #ffffff;
+    color: #000000fc;
+  }
+  .header {
+    width: 300px;
+  }
+  .play-button button {
+    font-size: 15px;
+    margin-right: 10px;
+    padding: 7px 20px;
+  }
+
+  /* Style for the message within the messages container */
+  .message {
+    font-size: 15px;
+    font-weight: bold;
+    padding: 7px;
+  }
+
+  /* Style for the score within the messages container */
+  #score {
+    font-size: 15px;
+    font-weight: bold;
+    padding: 7px;
+  }
+  #grid1 button {
+    border: 14px solid #ffffff;
+    border-radius: 25px;
+  }
+  #grid1 {
+    grid-template-columns: repeat(3, 95px);
+    grid-template-rows: repeat(3, 95px);
+  }
+
+  #grid1 button {
+    font-size: 28px;
+  }
+
+  #grid2 {
+    grid-template-columns: repeat(4, 70px);
+    grid-template-rows: repeat(4, 70px);
+  }
+
+  #grid2 button {
+    font-size: 20px;
+  }
+
+  #grid3 {
+    grid-template-columns: repeat(5, 55px);
+    grid-template-rows: repeat(5, 55px);
+  }
+
+  #grid3 button {
+    font-size: 19px;
+  }
+
+  .footer {
+    margin-top: 20px;
+  }
+
+  .footer span {
+    font-size: 16px;
+  }
+}
+
+/* Small screens (up to 600px) */
+@media (min-width: 481px) and (max-width: 600px) {
+  /* Update styles for elements to fit small screens */
+
+  /* Style for the messages container */
+  #messages {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    background-color: #ffffff;
+    color: #000000fc;
+  }
+  .header {
+    width: 420px;
+  }
+  .play-button button {
+    font-size: 20px;
+    margin-right: 5px;
+    padding: 8px 20px;
+  }
+
+  /* Style for the message within the messages container */
+  .message {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 8px;
+  }
+
+  /* Style for the score within the messages container */
+  #score {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 8px;
+  }
+
+  #grid1 {
+    grid-template-columns: repeat(3, 135px);
+    grid-template-rows: repeat(3, 135px);
+  }
+
+  #grid1 button {
+    border: 20px solid #ffffff;
+    font-size: 30px;
+  }
+
+  #grid2 {
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: repeat(4, 100px);
+  }
+
+  #grid2 button {
+    font-size: 25px;
+  }
+
+  #grid3 {
+    grid-template-columns: repeat(5, 80px);
+    grid-template-rows: repeat(5, 80px);
+  }
+
+  #grid3 button {
+    font-size: 25px;
+  }
+
+  .footer {
+    margin-top: 20px;
+  }
+
+  .footer span {
+    font-size: 23px;
+  }
+}
+
+/* Medium screens (601px to 992px) */
+@media (min-width: 601px) and (max-width: 992px) {
+  /* Update styles for elements to fit small screens */
+
+  /* Style for the messages container */
+  #messages {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    background-color: #ffffff;
+    color: #000000fc;
+  }
+  .header {
+    width: 455px;
+  }
+  .play-button button {
+    font-size: 22px;
+    margin-right: 5px;
+  }
+
+  /* Style for the message within the messages container */
+  .message {
+    font-size: 22px;
+    font-weight: bold;
+  }
+
+  /* Style for the score within the messages container */
+  #score {
+    font-size: 22px;
+    font-weight: bold;
+  }
+
+  #grid1 {
+    grid-template-columns: repeat(3, 145px);
+    grid-template-rows: repeat(3, 145px);
+  }
+
+  #grid1 button {
+    font-size: 30px;
+  }
+
+  #grid2 {
+    grid-template-columns: repeat(4, 110px);
+    grid-template-rows: repeat(4, 110px);
+  }
+
+  #grid2 button {
+    font-size: 30px;
+  }
+
+  #grid3 {
+    grid-template-columns: repeat(5, 90px);
+    grid-template-rows: repeat(5, 90px);
+  }
+
+  #grid3 button {
+    font-size: 25px;
+  }
+
+  .footer {
+    margin-top: 20px;
+  }
+
+  .footer span {
+    font-size: 28px;
+  }
+}
+/* Large screens (993px and above) */
+@media (min-width: 993px) {
+  /* Update styles for elements to fit small screens */
+
+  /* Style for the messages container */
+  #messages {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    background-color: #ffffff;
+    color: #000000fc;
+  }
+  .header {
+    width: 330px;
+    margin-bottom: 1%;
+  }
+  .play-button button {
+    font-size: 18px;
+    margin-right: 5px;
+    padding: 5px 20px;
+  }
+
+  /* Style for the message within the messages container */
+  .message {
+    font-size: 18px;
+    font-weight: bold;
+    padding: 5px;
+  }
+
+  /* Style for the score within the messages container */
+  #score {
+    font-size: 18px;
+    font-weight: bold;
+    padding: 5px;
+  }
+
+  #grid1 {
+    grid-template-columns: repeat(3, 105px);
+    grid-template-rows: repeat(3, 105px);
+  }
+
+  #grid1 button {
+    font-size: 28px;
+  }
+
+  #grid2 {
+    grid-template-columns: repeat(4, 80px);
+    grid-template-rows: repeat(4, 80px);
+  }
+
+  #grid2 button {
+    font-size: 25px;
+  }
+
+  #grid3 {
+    grid-template-columns: repeat(5, 65px);
+    grid-template-rows: repeat(5, 65px);
+  }
+
+  #grid3 button {
+    font-size: 21px;
+  }
+
+  .footer {
+    margin-top: 20px;
+  }
+
+  .footer span {
+    font-size: 20px;
+  }
+}
